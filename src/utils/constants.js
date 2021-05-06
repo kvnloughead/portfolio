@@ -22,7 +22,6 @@ export const darkModeStart = {
 export const colors = {
   black: '#131515',
   grey: '#2B2C28',
-  // darkColor: 'rgb(65, 72, 94)',
   darkColor: 'rgb(65, 72, 91)',
   lightColor: '#antiquewhite',
   white: 'rgb(205, 206, 210)',
