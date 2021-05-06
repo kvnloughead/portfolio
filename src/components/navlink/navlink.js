@@ -1,14 +1,16 @@
 import * as React from 'react';
 
-import * as styles from './navlink.module.css';
+import {
+  NavItem, NavLinkAnchor
+} from './styles';
 
 function NavLink({ htmlId, title }) {
   return (
-    <li className={`${styles.navItem}`}>
-      <a className={`${styles.navLink}`} href={`#${htmlId}`}>
+    <NavItem>
+      <NavLinkAnchor href={`#${htmlId}`}>
         {title}
-      </a>
-    </li>
+      </NavLinkAnchor>
+    </NavItem>
   );
 }
 

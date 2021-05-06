@@ -7,10 +7,7 @@ import styled from 'styled-components';
 import NavLink from '../navlink/navlink';
 import { colors, screenSizes } from '../../utils/constants';
 import { links, lightMenuIcon, lightCloseIcon } from '../../config/navbar';
-import {
-  Nav, ListStyles, MenuButton,
-
-} from './styles';
+import { Nav, ListStyles, MenuButton } from './styles';
 
 const List = styled.ul`${ListStyles}`;
 
