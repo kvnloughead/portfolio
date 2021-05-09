@@ -1,22 +1,20 @@
 import * as React from 'react';
 
 import Project from '../project/project';
-
 import projects from '../../config/projects';
-import * as styles from './projects.module.css';
-import { colors } from '../../utils/constants';
+import  { ProjectsContainer, Title, List } from './styles';
 
 const Projects = () => (
-  <section id="projects" style={{ background: colors.white }} className={styles.projects}>
-    <h2 style={{ color: colors.black }} className={styles.projects__title}>
+  <ProjectsContainer id="projects">
+    <Title>
       Projects
-    </h2>
-    <ul className={styles.projects__list}>
+    </Title>
+    <List>
       {projects.map((project) => (
         <Project key={project.title} data={project} />
       ))}
-    </ul>
-  </section>
+    </List>
+  </ProjectsContainer>
 );
 
 export default Projects;

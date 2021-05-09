@@ -23,7 +23,7 @@ export const colors = {
   black: '#131515',
   grey: '#2B2C28',
   darkColor: 'rgb(65, 72, 91)',
-  lightColor: '#antiquewhite',
+  lightColor: 'antiquewhite',
   white: 'rgb(205, 206, 210)',
   accent: 'rgb(240, 103, 47)',
   transparent: 'transparent',

@@ -3,11 +3,11 @@ import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 import Navbar from '../navbar/navbar';
 import Contacts from '../contacts/contacts';
+import Animation from '../animation/animation';
 
 import { personalInfo } from '../../config/resume-data';
-import { headerBackground } from '../../config/general';
 
-import { HeaderContainer, Info, Name, Job, Degree, HeaderImage, DownArrow } from './styles';
+import { HeaderContainer, Info, Name, Job, Degree, DownArrow } from './styles';
 
 const Header = () => (
   <HeaderContainer id="header">
@@ -18,7 +18,7 @@ const Header = () => (
       <Degree>{personalInfo.degree}</Degree>
       <Contacts />
     </Info>
-    <HeaderImage src={headerBackground} />
+    <Animation />
     <DownArrow icon={faArrowAltCircleDown} />
   </HeaderContainer>
 );
