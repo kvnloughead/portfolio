@@ -22,7 +22,7 @@ export const ListStyles = css`
   padding: 0;
   background: transparent;
   @media screen and (max-width: 767.5px) {
-    visibility: ${props => props && props.isMobileMenuOpen ? "visible" : "hidden" };
+    visibility: ${(props) => (props && props.isMobileMenuOpen ? 'visible' : 'hidden')};
     flex-direction: column;
     position: fixed;
     width: 100%;
@@ -48,5 +48,3 @@ export const MenuButton = styled.button`
     height: 14px;
   }
 `;
-
-

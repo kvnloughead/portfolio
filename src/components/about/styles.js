@@ -4,7 +4,7 @@ import { colors } from '../../utils/constants';
 
 export const AboutContainer = styled.section`
   min-height: 300px;
-  padding: 96px 100px 66px;
+  padding: 96px 100px 96px;
   display: flex;
   align-items: center;
   justify-content: center;

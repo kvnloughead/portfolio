@@ -3,8 +3,8 @@
 export const htmlIds = {
   home: 'header',
   about: 'about',
-  projects: 'projects',
   skills: 'skills',
+  projects: 'projects',
   contacts: 'contacts',
 };
 

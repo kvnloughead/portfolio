@@ -10,17 +10,19 @@ import {
   HeaderContainer, Info, Name, Job, Degree,
 } from './styles';
 
-const Header = () => (
-  <HeaderContainer id="header">
-    <Navbar />
-    <Info>
-      <Name>{`${personalInfo.name}`}</Name>
-      <Job>{personalInfo.job}</Job>
-      <Degree>{personalInfo.degree}</Degree>
-      <Contacts />
-    </Info>
-    <Animation />
-  </HeaderContainer>
-);
+const Header = React.forwardRef((props, ref) => (
+  <div ref={ref}>
+    <HeaderContainer id="header">
+      <Navbar />
+      <Info>
+        <Name>{`${personalInfo.name}`}</Name>
+        <Job>{personalInfo.job}</Job>
+        <Degree>{personalInfo.degree}</Degree>
+        <Contacts />
+      </Info>
+      <Animation />
+    </HeaderContainer>
+  </div>
+));
 
 export default Header;

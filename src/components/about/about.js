@@ -10,18 +10,20 @@ import {
   TextContainer,
 } from './styles';
 
-const About = () => (
-  <AboutContainer id="about" >
-    <Image alt={personalInfo.name} src={profilePic} />
-    <TextContainer>
-      <Title>
-        About Me
-      </Title>
-      <Summary>
-        {personalInfo.summary}
-      </Summary>
-    </TextContainer>
-  </AboutContainer>
-);
+const About = React.forwardRef((props, ref) => (
+  <div ref={ref}>
+    <AboutContainer id="about">
+      <Image alt={personalInfo.name} src={profilePic} />
+      <TextContainer>
+        <Title>
+          About Me
+        </Title>
+        <Summary>
+          {personalInfo.summary}
+        </Summary>
+      </TextContainer>
+    </AboutContainer>
+  </div>
+));
 
 export default About;

@@ -1,5 +1,8 @@
-import * as React from 'react';
+/* eslint-disable no-debugger */
+import React, { useState } from 'react';
+import { Waypoint } from 'react-waypoint';
 
+import NavbarContext from '../../contexts/NavbarContext';
 import Layout from '../layout/layout';
 import Header from '../header/header';
 import About from '../about/about';
@@ -15,22 +18,50 @@ const pageStyles = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  // alignItems: 'center',
-  // background: "rgb(30, 61, 89)"
-  // background: 'linear-gradient(113deg, rgba(30, 61, 89, 1) 11%, rgba(222,215,196,1) 100%)',
 };
 
-const App = () => (
-  <Layout>
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <Header />
-      <About />
-      <Skills />
-      <Projects />
-    </main>
-    <Footer />
-  </Layout>
-);
+const App = () => {
+  const [currentNavlink, setCurrentNavlink] = useState('Home');
+
+  return (
+    <Layout>
+      <main style={pageStyles}>
+        <title>Home Page</title>
+        <NavbarContext.Provider value={currentNavlink}>
+          <Waypoint
+            onEnter={() => { setCurrentNavlink('Home'); }}
+          >
+            <Header />
+          </Waypoint>
+        </NavbarContext.Provider>
+        <Waypoint
+          onEnter={() => { setCurrentNavlink('About'); }}
+          bottomOffset="60%"
+        >
+          <About />
+        </Waypoint>
+        <Waypoint
+          onEnter={() => { setCurrentNavlink('Skills'); }}
+          bottomOffset="60%"
+        >
+          <Skills />
+        </Waypoint>
+
+        <Waypoint
+          onEnter={() => { setCurrentNavlink('Projects'); }}
+          bottomOffset="60%"
+        >
+          <Projects />
+        </Waypoint>
+
+        <Waypoint
+          onEnter={() => { setCurrentNavlink('Contacts'); }}
+          onLeave={() => { setCurrentNavlink('Projects'); }}
+        />
+      </main>
+      <Footer />
+    </Layout>
+  );
+};
 
 export default App;

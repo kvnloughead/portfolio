@@ -1,13 +1,14 @@
 import * as React from 'react';
+import styled from 'styled-components';
 
-import {
-  NavItem, NavLinkAnchor
-} from './styles';
+import { NavItem, NavLinkAnchorStyles } from './styles';
 
-function NavLink({ htmlId, title }) {
+const NavLinkAnchor = styled.a`${NavLinkAnchorStyles}`;
+
+function NavLink({ htmlId, title, isCurrent }) {
   return (
     <NavItem>
-      <NavLinkAnchor href={`#${htmlId}`}>
+      <NavLinkAnchor isCurrent={isCurrent} href={`#${htmlId}`}>
         {title}
       </NavLinkAnchor>
     </NavItem>

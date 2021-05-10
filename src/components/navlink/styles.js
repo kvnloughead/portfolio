@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { colors } from '../../utils/constants';
 
@@ -16,7 +16,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLinkAnchor = styled.a`
+export const NavLinkAnchorStyles = css`
   text-transform: uppercase;
   text-decoration: none;
   font-style: normal;
@@ -26,7 +26,7 @@ export const NavLinkAnchor = styled.a`
   vertical-align: super;
   font: 20px 'opensans-bold', sans-serif;
   letter-spacing: 2.5px;
-  color: ${colors.white};
+  color: ${(props) => (props && props.isCurrent ? `${colors.accent}` : `${colors.white}`)};
 
   &:focus {
     outline: ${colors.white} 1px solid;
@@ -37,8 +37,3 @@ export const NavLinkAnchor = styled.a`
   }
 
 `;
-
-// style for accented color, disabled with jquery
-// .current {
-//   color: #F06000;
-// }

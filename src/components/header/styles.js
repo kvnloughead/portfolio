@@ -101,4 +101,3 @@ export const DownArrow = styled(FontAwesomeIcon)`
     font-size: 2em;
   }
 `;
-

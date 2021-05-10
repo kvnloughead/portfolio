@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-// import jQuery from 'jquery';
 
+import NavbarContext from '../../contexts/NavbarContext';
 import NavLink from '../navlink/navlink';
 import { colors, screenSizes } from '../../utils/constants';
 import { links, lightMenuIcon, lightCloseIcon } from '../../config/navbar';
@@ -11,14 +11,14 @@ import { Nav, ListStyles, MenuButton } from './styles';
 
 const List = styled.ul`${ListStyles}`;
 
-
-
 function Navbar() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
   const [, setWindowScrollY] = useState(window.scrollY);
-  const [isNavbarDark, setIsNavbarDark] = useState(false);
+  const [isNavbarDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const currentNavlink = React.useContext(NavbarContext);
 
   const handleScrollY = () => {
     setWindowScrollY(window.scrollY);
@@ -51,32 +51,9 @@ function Navbar() {
           setIsScrolling(false);
         }, 250);
       },
-      false
+      false,
     );
   });
-
-  // useEffect(() => {
-
-  //   jQuery(document).ready(($) => {
-  //     const sections = $('header, section');
-  //     const navlinks = $('#navlink-wrapper a');
-
-  //     sections.waypoint({
-  //       handler(event) {
-  //         let activeSection;
-
-  //         activeSection = $(this);
-  //         if (event === 'up') activeSection = activeSection.prev();
-  //         const activeLink = $(`#navlink-wrapper a[href="#${activeSection.attr('id')}"]`);
-  //         setIsNavbarDark(activeSection.context.id === 'projects');
-
-  //         navlinks.css('color', colors.white);
-  //         activeLink.css('color', colors.accent);
-  //       },
-  //       offset: '5%',
-  //     });
-  //   });
-  // });
 
   const isMobile = windowInnerWidth <= screenSizes.mobile;
 
@@ -87,24 +64,24 @@ function Navbar() {
         opacity: isScrolling ? (isNavbarDark ? 0.5 : 0.1) : 1,
       }}
     >
-    <List 
-      isMobileMenuOpen={isMobileMenuOpen}
-      id="navlink-wrapper"
-      style={{ background: `${isMobileMenuOpen ? colors.grey : colors.transparent}`}}
-    >
-      {links.map((link) => (
-        <NavLink htmlId={link.htmlId} title={link.title} key={`navlink-${link.title}`} />
-      ))}
-    </List>
-    {isMobile && (
+      <List
+        isMobileMenuOpen={isMobileMenuOpen}
+        id="navlink-wrapper"
+        style={{ background: `${isMobileMenuOpen ? colors.grey : colors.transparent}` }}
+      >
+        {links.map((link) => (
+          <NavLink isCurrent={link.title === currentNavlink} htmlId={link.htmlId} title={link.title} key={`navlink-${link.title}`} />
+        ))}
+      </List>
+      {isMobile && (
       <MenuButton
         type="button"
         aria-label="open-or-close-mobile-menu"
         style={{ backgroundImage: `url(${isMobileMenuOpen ? lightCloseIcon : lightMenuIcon})` }}
         onClick={handleMenuIconClick}
       />
-    )}
-  </Nav>    
+      )}
+    </Nav>
   );
 }
 

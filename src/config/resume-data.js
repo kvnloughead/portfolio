@@ -1,5 +1,7 @@
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faJs, faPython, faNodeJs, faReact, faAws } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGithub, faJs, faPython, faNodeJs, faReact, faAws,
+} from '@fortawesome/free-brands-svg-icons';
 
 export const personalInfo = {
   name: 'Kevin Loughead',
@@ -17,7 +19,7 @@ export const contactInfo = {
 
 export const skills = [
   { name: 'MongoDB', icon: faDatabase },
-  { name: 'Express', src: './images/icons/expressjs-icon.svg'},
+  { name: 'Express', src: './images/icons/expressjs-icon.svg' },
   { name: 'React', icon: faReact },
   { name: 'Node.js', icon: faNodeJs },
   { name: 'Python', icon: faPython },
