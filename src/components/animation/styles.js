@@ -15,15 +15,37 @@ const spin = keyframes`
   }
 `;
 
-const changeColor = keyframes`
+const changeToAccentColor = keyframes`
   100% {
     background-color: ${colors.accent};
   }
 `;
 
+const changeToWhite = keyframes`
+  100% {
+    background-color: ${colors.white};
+  }
+`;
+
 const grow = keyframes`
   100% {
+    transform: scale(5);
+  }
+`;
+
+const shrink = keyframes`
+  100% {
     transform: scale(1.75);
+  }
+`;
+
+const dissipate = keyframes`
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 `;
 
@@ -32,21 +54,24 @@ export const AnimationContainer = styled.div`
   padding-top: 150px;
 `;
 
-export const Sun = styled.div`
+export const SunStyles = css`
   border-radius: 50%;
-  background: ${colors.white};
+  background: ${props => props && props.isArrow ? `${colors.transparent}` : `${colors.white}`};
   width: 38px;
   height: 38px;
   position: absolute;
   top: 186px;
   left: 35px;
-  animation: ${changeColor} 4s ease-in 1;
+  animation: ${changeToAccentColor} 3s cubic-bezier(.74,.1,.88,.14) 1 forwards, 
+             ${grow} 3s cubic-bezier(.74,.1,.88,.14) 1 forwards,
+             ${shrink} 1s cubic-bezier(.01,.96,.01,1.04) 1 forwards 3s,
+             ${changeToWhite} 1s cubic-bezier(.01,.96,.01,1.04) 1 forwards 3s;
 `;
 
 export const InnerOrbit = styled.div`
   border-radius: 50%;
   border: 1px solid ${colors.white};
-  width: 65px;
+  width: 65px;  
   height: 65px;
   display: flex;
   align-items: center;
@@ -66,7 +91,9 @@ export const OuterOrbitStyles = css`
   align-items: center;
   justify-content: center;
   position: relative;
-  animation: ${revolve} ${props => props && props.isArrow ? "5s" : "1s" } linear infinite;
+  opacity: 1;
+  animation: ${revolve} 5s linear infinite,
+             ${dissipate} 2s ease-out 1 3s forwards;
 `;
 
 export const Orbit = styled.div`
@@ -82,11 +109,11 @@ export const Orbit = styled.div`
 `;
 
 export const DownArrow = styled(FontAwesomeIcon)`
-  width: 40px;
-  height: 40px;
+  width: 65px;
+  height: 65px;
   position: absolute;
-  left: -6px;  
-  top: -1px;
+  left: -5px;
+  top: -15px;
   margin: auto;
   text-align: center;
   color: ${colors.accent};
@@ -94,7 +121,6 @@ export const DownArrow = styled(FontAwesomeIcon)`
   @media screen and (max-width: 568px) {
     font-size: 2em;
   }
-  animation: ${grow} 3s ease-out 1 forwards; 
 `;
 
 export const Planet = styled.div`

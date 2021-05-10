@@ -1,23 +1,24 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
+import RippleButton from '../ripplebutton/ripplebutton';
 
-import { Sun, Orbit, Planet, DownArrow, AnimationContainer, InnerOrbit, OuterOrbitStyles } from './styles'
+import { SunStyles, Planet, DownArrow, AnimationContainer, InnerOrbit, OuterOrbitStyles } from './styles'
 
+const Sun = styled.div`${SunStyles}`;
 const OuterOrbit = styled.div`${OuterOrbitStyles}`;
 
 const Animation = () => {
   const [isArrow, setIsArrow] = React.useState(false);
   return (
     <AnimationContainer>
-      {/* <Orbit isArrow>
-        <Planet />
-      </Orbit> */}
-      <OuterOrbit isArrow>
-        <Planet />
+      <OuterOrbit>
+        {!isArrow && <Planet /> }
       </OuterOrbit>
       <InnerOrbit />
-      <Sun onAnimationEnd={() => setIsArrow(true)}>{isArrow && <DownArrow icon={faArrowAltCircleDown} />}</Sun>
+      <Sun isArrow={isArrow} onAnimationEnd={() => setIsArrow(true)}>
+        {isArrow && <DownArrow icon={faArrowAltCircleDown} />}
+      </Sun>
     </AnimationContainer>
   );
 }

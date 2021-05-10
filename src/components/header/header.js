@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
 import Navbar from '../navbar/navbar';
 import Contacts from '../contacts/contacts';
@@ -19,7 +18,6 @@ const Header = () => (
       <Contacts />
     </Info>
     <Animation />
-    <DownArrow icon={faArrowAltCircleDown} />
   </HeaderContainer>
 );
 
