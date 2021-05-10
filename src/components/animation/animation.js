@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
-import RippleButton from '../ripplebutton/ripplebutton';
 
-import { SunStyles, Planet, DownArrow, AnimationContainer, InnerOrbit, OuterOrbitStyles } from './styles'
+import {
+  SunStyles, Planet, DownArrow, AnimationContainer, InnerOrbit, OuterOrbitStyles,
+} from './styles';
 
 const Sun = styled.div`${SunStyles}`;
 const OuterOrbit = styled.div`${OuterOrbitStyles}`;
@@ -21,6 +22,6 @@ const Animation = () => {
       </Sun>
     </AnimationContainer>
   );
-}
+};
 
 export default Animation;

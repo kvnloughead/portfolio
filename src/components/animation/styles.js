@@ -56,7 +56,7 @@ export const AnimationContainer = styled.div`
 
 export const SunStyles = css`
   border-radius: 50%;
-  background: ${props => props && props.isArrow ? `${colors.transparent}` : `${colors.white}`};
+  background: ${(props) => (props && props.isArrow ? `${colors.transparent}` : `${colors.white}`)};
   width: 38px;
   height: 38px;
   position: absolute;
@@ -131,4 +131,4 @@ export const Planet = styled.div`
   top: 55px;
   left: -5px;
   background: ${colors.accent};
-`;  
+`;

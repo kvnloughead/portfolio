@@ -6,7 +6,9 @@ import Animation from '../animation/animation';
 
 import { personalInfo } from '../../config/resume-data';
 
-import { HeaderContainer, Info, Name, Job, Degree, DownArrow } from './styles';
+import {
+  HeaderContainer, Info, Name, Job, Degree,
+} from './styles';
 
 const Header = () => (
   <HeaderContainer id="header">
