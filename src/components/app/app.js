@@ -20,46 +20,34 @@ const pageStyles = {
   alignItems: 'center',
 };
 
+const WaypointWrapper = ({
+  component: Component, handler, linkName, ...props
+}) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <Waypoint onEnter={() => { handler(linkName); }} {...props}><Component /></Waypoint>
+);
+
 const App = () => {
   const [currentNavlink, setCurrentNavlink] = useState('Home');
 
   return (
     <Layout>
       <main style={pageStyles}>
-        <title>Home Page</title>
+        <title>Kevin Loughead&apos;s Portfolio</title>
         <NavbarContext.Provider value={currentNavlink}>
+          <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="Home" />
+          <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="About" bottomOffset="60%" />
+          <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="Skills" bottomOffset="60%" topOffset="60%" />
+          <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="Projects" bottomOffset="60%" topOffset="60%" />
           <Waypoint
-            onEnter={() => { setCurrentNavlink('Home'); }}
-          >
-            <Header />
-          </Waypoint>
+            onEnter={() => { setCurrentNavlink('Contacts'); }}
+            onLeave={({ event }) => {
+              if (event.target.URL.endsWith('projects')) { setCurrentNavlink('Projects'); }
+            }}
+          />
+          <Footer />
         </NavbarContext.Provider>
-        <Waypoint
-          onEnter={() => { setCurrentNavlink('About'); }}
-          bottomOffset="60%"
-        >
-          <About />
-        </Waypoint>
-        <Waypoint
-          onEnter={() => { setCurrentNavlink('Skills'); }}
-          bottomOffset="60%"
-        >
-          <Skills />
-        </Waypoint>
-
-        <Waypoint
-          onEnter={() => { setCurrentNavlink('Projects'); }}
-          bottomOffset="60%"
-        >
-          <Projects />
-        </Waypoint>
-
-        <Waypoint
-          onEnter={() => { setCurrentNavlink('Contacts'); }}
-          onLeave={() => { setCurrentNavlink('Projects'); }}
-        />
       </main>
-      <Footer />
     </Layout>
   );
 };

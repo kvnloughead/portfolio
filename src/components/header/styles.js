@@ -16,7 +16,7 @@ export const HeaderContainer = styled.header`
   max-height: 900px;
   box-sizing: border-box;
   max-width: 1440px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767.5px) {
     flex-direction: column;
     align-items: center;
   }
@@ -29,10 +29,14 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 800px;
   @media screen and (min-width: 1800px) {
     margin-right: 7vw;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1280px) {
+    min-width: 0;
+  }
+  @media screen and (max-width: 767.5px) {
     align-items: center;
   }
 `;
@@ -40,9 +44,6 @@ export const Info = styled.div`
 export const Name = styled.h1`
   font-size: 90px;
   margin: 0 0 32px 0;
-  @media screen and (max-width: 1280px) {
-    font-size: 72px;
-  }
   @media screen and (max-width: 900px) {
     font-size: 60px;
   }

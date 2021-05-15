@@ -43,9 +43,13 @@ const dissipate = keyframes`
   50% {
     opacity: 0.2;
   }
-  100% {
+  99% {
     transform: scale(3);
     opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: scale(.5);
   }
 `;
 
@@ -60,8 +64,8 @@ export const SunStyles = css`
   width: 38px;
   height: 38px;
   position: absolute;
-  top: 186px;
-  left: 35px;
+  top: 185px;
+  left: 34px;
   animation: ${changeToAccentColor} 3s cubic-bezier(.74,.1,.88,.14) 1 forwards, 
              ${grow} 3s cubic-bezier(.74,.1,.88,.14) 1 forwards,
              ${shrink} 1s cubic-bezier(.01,.96,.01,1.04) 1 forwards 3s,
@@ -118,9 +122,6 @@ export const DownArrow = styled(FontAwesomeIcon)`
   text-align: center;
   color: ${colors.accent};
   font-size: 3em;
-  @media screen and (max-width: 568px) {
-    font-size: 2em;
-  }
 `;
 
 export const Planet = styled.div`
