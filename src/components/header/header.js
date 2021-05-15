@@ -12,7 +12,7 @@ import {
 
 const Header = React.forwardRef((props, ref) => (
   <div ref={ref}>
-    <HeaderContainer id="header">
+    <HeaderContainer id="home">
       <Navbar />
       <Info>
         <Name>{`${personalInfo.name}`}</Name>

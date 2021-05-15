@@ -23,31 +23,44 @@ const pageStyles = {
 const WaypointWrapper = ({
   component: Component, handler, linkName, ...props
 }) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <Waypoint onEnter={() => { handler(linkName); }} {...props}><Component /></Waypoint>
+  <Waypoint
+    onEnter={() => { handler(linkName); }}
+    onLeave={({ event }) => {
+      if (typeof event.target.URL === 'string') {
+        handler(event.target.URL.match(/#([a-z]+)$/)[1]);
+      }
+    }}
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    {...props}
+  >
+    <Component />
+  </Waypoint>
 );
 
 const App = () => {
-  const [currentNavlink, setCurrentNavlink] = useState('Home');
+  const [currentNavlink, setCurrentNavlink] = useState('home');
 
   return (
     <Layout>
       <main style={pageStyles}>
         <title>Kevin Loughead&apos;s Portfolio</title>
         <NavbarContext.Provider value={currentNavlink}>
-          <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="Home" />
-          <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="About" bottomOffset="60%" />
-          <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="Skills" bottomOffset="60%" topOffset="60%" />
-          <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="Projects" bottomOffset="60%" topOffset="60%" />
+          <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="home" />
+          <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
+          <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
+          <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
+          <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
           <Waypoint
-            onEnter={() => { setCurrentNavlink('Contacts'); }}
+            onEnter={() => { setCurrentNavlink('contacts'); }}
             onLeave={({ event }) => {
-              if (event.target.URL.endsWith('projects')) { setCurrentNavlink('Projects'); }
+              if (typeof event.target.URL === 'string') {
+                setCurrentNavlink(event.target.URL.match(/#([a-z]+)$/)[1]);
+              }
             }}
           />
-          <Footer />
         </NavbarContext.Provider>
       </main>
+      <Footer />
     </Layout>
   );
 };

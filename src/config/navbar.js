@@ -1,7 +1,7 @@
 // import { addUniqueId } from '../utils/unique-id';
 
 export const htmlIds = {
-  home: 'header',
+  home: 'home',
   about: 'about',
   skills: 'skills',
   projects: 'projects',

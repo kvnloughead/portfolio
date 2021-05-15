@@ -43,8 +43,4 @@ export const MenuButton = styled.button`
   border: none;
   right: 20px;
   top: 17px;
-  @media screen and (max-width: 767.5px) {
-    width: 14px;
-    height: 14px;
-  }
 `;

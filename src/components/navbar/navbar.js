@@ -70,7 +70,7 @@ function Navbar() {
         style={{ background: `${isMobileMenuOpen ? colors.grey : colors.transparent}` }}
       >
         {links.map((link) => (
-          <NavLink isCurrent={link.title === currentNavlink} htmlId={link.htmlId} title={link.title} key={`navlink-${link.title}`} />
+          <NavLink isCurrent={link.htmlId === currentNavlink} htmlId={link.htmlId} title={link.title} key={`navlink-${link.title}`} />
         ))}
       </List>
       {isMobile && (
