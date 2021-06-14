@@ -15,6 +15,9 @@ export const profilePic = './images/profile-pic.jpg';
 
 export const contactInfo = {
   linkedIn: 'https://www.linkedin.com/in/kloughead/',
+  github: 'https://github.com/kvnloughead',
+  email: 'mailto:kvnloughead@gmail.com',
+  resume: './kloughead_resume.pdf',
 };
 
 export const skills = [

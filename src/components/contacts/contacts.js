@@ -29,19 +29,31 @@ const Item = styled.li`
   }
 `;
 
+const Anchor = styled.a`
+  color: rgb(205,206,210);
+`;
+
 const Contacts = () => (
   <List>
     <Item>
-      <FontAwesomeIcon icon={faGithub} />
+      <Anchor target="_blank" href={contactInfo.github} rel="noopener noreferer">
+        <FontAwesomeIcon icon={faGithub} />
+      </Anchor>
     </Item>
     <Item>
-      <FontAwesomeIcon href={contactInfo.linkedIn} icon={faLinkedin} />
+      <Anchor target="_blank" href={contactInfo.linkedIn} rel="noopener noreferer">
+        <FontAwesomeIcon icon={faLinkedin} />
+      </Anchor>
     </Item>
     <Item>
-      <FontAwesomeIcon icon={faEnvelope} />
+      <Anchor target="_blank" href={contactInfo.email} rel="noopener noreferer">
+        <FontAwesomeIcon icon={faEnvelope} />
+      </Anchor>
     </Item>
     <Item>
-      <FontAwesomeIcon icon={faDownload} />
+      <Anchor target="_blank" href={contactInfo.resume} rel="noopener noreferer">
+        <FontAwesomeIcon icon={faDownload} />
+      </Anchor>
     </Item>
   </List>
 );
