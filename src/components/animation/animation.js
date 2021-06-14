@@ -6,7 +6,7 @@ import {
   SunStyles, Planet, DownArrow, AnimationContainer, InnerOrbit, OuterOrbitStyles,
 } from './styles';
 
-const Sun = styled.div`${SunStyles}`;
+const Sun = styled.a`${SunStyles}`;
 const OuterOrbit = styled.div`${OuterOrbitStyles}`;
 
 const Animation = () => {
@@ -17,7 +17,7 @@ const Animation = () => {
         {!isArrow && <Planet /> }
       </OuterOrbit>
       <InnerOrbit />
-      <Sun isArrow={isArrow} onAnimationEnd={() => setIsArrow(true)}>
+      <Sun isArrow={isArrow} onAnimationEnd={() => setIsArrow(true)} href={`#${'about'}`}>
         {isArrow && <DownArrow icon={faArrowAltCircleDown} />}
       </Sun>
     </AnimationContainer>
