@@ -26,7 +26,7 @@ const projects = [
     ],
     demoLink: 'https://kvnloughead.github.io/invoice-app/',
     repos: [
-      { name: 'Front-end', link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend' },
+      { name: 'Front-end', link: 'https://kvnloughead.github.io/invoice-app/' },
     ],
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     image: './images/projects/gatsby-portfolio.png',
     tech: ['React', 'JavaScript', 'Styled-Components'],
     description: [
-      'Portfolio project written in React with styled-components. ',
+      'Portfolio project written in React with styled-components. This is the think you are looking at!',
     ],
     // TODO - link to homepage so the page reloads
     demoLink: '#home',

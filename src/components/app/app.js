@@ -26,7 +26,7 @@ const WaypointWrapper = ({
   <Waypoint
     onEnter={() => { handler(linkName); }}
     onLeave={({ event }) => {
-      if (typeof event.target.URL === 'string') {
+      if (typeof event.target.URL === 'string' && event.target.URL.match(/#([a-z]+)$/)) {
         handler(event.target.URL.match(/#([a-z]+)$/)[1]);
       }
     }}
@@ -53,7 +53,7 @@ const App = () => {
           <Waypoint
             onEnter={() => { setCurrentNavlink('contacts'); }}
             onLeave={({ event }) => {
-              if (typeof event.target.URL === 'string') {
+              if (typeof event.target.URL === 'string' && event.target.URL.match(/#([a-z]+)$/)) {
                 setCurrentNavlink(event.target.URL.match(/#([a-z]+)$/)[1]);
               }
             }}
