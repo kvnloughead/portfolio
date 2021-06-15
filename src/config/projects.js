@@ -15,6 +15,21 @@ const projects = [
     ],
   },
   {
+    title: 'An Invoicing App',
+    image: './images/projects/invoice.png',
+    tech: ['React', 'JavaScript', 'Styled-Components'],
+    description: [
+      'Work in progress. An invoice app built using specs from Frontend Mentor. Features include',
+      '- Dark/light mode',
+      '- Forms for creating new invoices and modifying existing invoices',
+      '- Invoice line items that calculate the total automatically',
+    ],
+    demoLink: 'https://kvnloughead.github.io/invoice-app/',
+    repos: [
+      { name: 'Front-end', link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend' },
+    ],
+  },
+  {
     title: 'Ant Robotics',
     image: './images/projects/ant-robotics.png',
     tech: ['React', 'JavaScript'],
@@ -27,15 +42,15 @@ const projects = [
     repos: [{ name: 'Front-end', link: 'https://github.com/kvnloughead/ant-robotics' }],
   },
   {
-    title: 'My Gatsby Portfolio',
+    title: 'This Portfolio',
     image: './images/projects/gatsby-portfolio.png',
-    tech: ['Gatsby', 'React', 'jQuery', 'JavaScript'],
+    tech: ['React', 'JavaScript', 'Styled-Components'],
     description: [
-      "Portfolio project written using Gatbsy and styled-components. This is a work in progress, so I'll have to add more details",
-      'Lorem ipsum ... neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+      'Portfolio project written in React with styled-components. ',
     ],
-    demoLink: '#',
-    repos: [{ name: 'Front-end', link: 'https://github.com/kvnloughead/gatsby-portfolio' }],
+    // TODO - link to homepage so the page reloads
+    demoLink: '#home',
+    repos: [{ name: 'Front-end', link: 'https://github.com/kvnloughead/portfolio' }],
   },
   {
     title: 'Around the US',
