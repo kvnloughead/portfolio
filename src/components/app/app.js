@@ -49,7 +49,6 @@ const App = () => {
           <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
           <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
           <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
-          <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
           <Waypoint
             onEnter={() => { setCurrentNavlink('contacts'); }}
             onLeave={({ event }) => {
