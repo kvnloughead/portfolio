@@ -17,4 +17,5 @@ export const Section = styled.footer`
 export const UpArrow = styled(FontAwesomeIcon)`
   margin: 75px 0;
   transform: rotate(180deg);
+  color: rgb(205,206,210);;
 `;

@@ -7,7 +7,9 @@ import { Section, UpArrow } from './styles';
 
 const Footer = () => (
   <Section id="contacts">
-    <UpArrow icon={faArrowAltCircleDown} size="3x" />
+    <a href="#home">
+      <UpArrow icon={faArrowAltCircleDown} size="3x" />
+    </a>
     <Contacts />
   </Section>
 );
