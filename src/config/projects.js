@@ -24,7 +24,7 @@ const projects = [
       '- Forms for creating new invoices and modifying existing invoices',
       '- Invoice line items that calculate the total automatically',
     ],
-    demoLink: 'https://kvnloughead.github.io/invoice-app/',
+    demoLink: 'https://github.com/kvnloughead/invoice-app/',
     repos: [
       { name: 'Front-end', link: 'https://kvnloughead.github.io/invoice-app/' },
     ],
@@ -48,8 +48,7 @@ const projects = [
     description: [
       'Portfolio project written in React with styled-components. This is the think you are looking at!',
     ],
-    // TODO - link to homepage so the page reloads
-    demoLink: '#home',
+    demoLink: 'https://kloughead.netlify.app/',
     repos: [{ name: 'Front-end', link: 'https://github.com/kvnloughead/portfolio' }],
   },
   {
