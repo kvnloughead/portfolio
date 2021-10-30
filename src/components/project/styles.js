@@ -20,7 +20,7 @@ export const Image = styled.img`
   object-fit: contain;
   box-shadow: 0 4px 40px rgb(0 0 0 / 28%);
   @media screen and (max-width: 960px) {
-    width: 80vw;
+    width: 100%;
   }
 `;
 

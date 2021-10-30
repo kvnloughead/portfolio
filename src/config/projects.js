@@ -19,10 +19,11 @@ const projects = [
     image: './images/projects/invoice.png',
     tech: ['React', 'JavaScript', 'Styled-Components'],
     description: [
-      'Work in progress. An invoice app built using specs from Frontend Mentor. Features include',
+      'An invoice app built using specs from Frontend Mentor. Features include',
       '- Dark/light mode',
       '- Forms for creating new invoices and modifying existing invoices',
       '- Invoice line items that calculate the total automatically',
+      '- [WIP] Postgresql Backend',
     ],
     demoLink: 'https://github.com/kvnloughead/invoice-app/',
     repos: [
