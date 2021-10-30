@@ -67,6 +67,20 @@ const projects = [
       { name: 'Back-end', link: 'https://github.com/kvnloughead/react-around-api-full' },
     ],
   },
+  {
+    title: 'Microservices',
+    image: './images/projects/around-js.png',
+    tech: ['Node', 'Express', 'MongoDB', 'JavaScript'],
+    description: [
+      'A collection of microservices',
+    ],
+    demoLink: '/backend-projects',
+    internalLink: true,
+    repos: [
+      { name: 'Front-end', link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend' },
+      { name: 'Back-end', link: 'https://github.com/kvnloughead/react-around-api-full' },
+    ],
+  },
 ];
 
 export default projects;

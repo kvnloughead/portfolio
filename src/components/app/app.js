@@ -1,5 +1,6 @@
 /* eslint-disable no-debugger */
 import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
 import { Waypoint } from 'react-waypoint';
 
 import NavbarContext from '../../contexts/NavbarContext';
@@ -44,20 +45,25 @@ const App = () => {
     <Layout>
       <main style={pageStyles}>
         <title>Kevin Loughead&apos;s Portfolio</title>
-        <NavbarContext.Provider value={currentNavlink}>
-          <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="home" />
-          <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
-          <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
-          <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
-          <Waypoint
-            onEnter={() => { setCurrentNavlink('contacts'); }}
-            onLeave={({ event }) => {
-              if (typeof event.target.URL === 'string' && event.target.URL.match(/#([a-z]+)$/)) {
-                setCurrentNavlink(event.target.URL.match(/#([a-z]+)$/)[1]);
-              }
-            }}
-          />
-        </NavbarContext.Provider>
+        <Route exact path="/">
+          <NavbarContext.Provider value={currentNavlink}>
+            <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="home" />
+            <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
+            <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
+            <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
+            <Waypoint
+              onEnter={() => { setCurrentNavlink('contacts'); }}
+              onLeave={({ event }) => {
+                if (typeof event.target.URL === 'string' && event.target.URL.match(/#([a-z]+)$/)) {
+                  setCurrentNavlink(event.target.URL.match(/#([a-z]+)$/)[1]);
+                }
+              }}
+            />
+          </NavbarContext.Provider>
+        </Route>
+        <Route path="/backend-projects">
+          <h1>This is backend only project section</h1>
+        </Route>
       </main>
       <Footer />
     </Layout>

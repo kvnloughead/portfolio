@@ -18,35 +18,39 @@ import {
   DemoLink,
 } from './styles';
 
-const Project = ({ data }) => (
-  <ProjectContainer>
-    <Image alt={data.title} src={data.image} />
-    <InfoContainer>
-      <Title>{data.title}</Title>
-      <TechStack>
-        {data.tech.map((item) => (
-          <TechItem key={`${data.title}-${item}`}>{item}</TechItem>
-        ))}
-      </TechStack>
-      <Description>
-        {data.description.map((paragraph) => (
-          <Paragraph key={paragraph}>{paragraph}</Paragraph>
-        ))}
-      </Description>
+const Project = ({ data }) => {
+  const HOME = process.env.PUBLIC_URL;
 
-      <Links>
-        <li>
-          <DemoLink href={data.demoLink}>Demo</DemoLink>
-        </li>
-        {data.repos.map((repo) => (
-          <LinkContainer key={repo.link}>
-            <FontAwesomeIcon icon={faGithub} />
-            <Link href={repo.link}>{`     ${repo.name}`}</Link>
-          </LinkContainer>
-        ))}
-      </Links>
-    </InfoContainer>
-  </ProjectContainer>
-);
+  return (
+    <ProjectContainer>
+      <Image alt={data.title} src={data.image} />
+      <InfoContainer>
+        <Title>{data.title}</Title>
+        <TechStack>
+          {data.tech.map((item) => (
+            <TechItem key={`${data.title}-${item}`}>{item}</TechItem>
+          ))}
+        </TechStack>
+        <Description>
+          {data.description.map((paragraph) => (
+            <Paragraph key={paragraph}>{paragraph}</Paragraph>
+          ))}
+        </Description>
+
+        <Links>
+          <li>
+            <DemoLink href={`${data.internalLink ? HOME : ''}${data.demoLink}`}>Demo</DemoLink>
+          </li>
+          {data.repos.map((repo) => (
+            <LinkContainer key={repo.link}>
+              <FontAwesomeIcon icon={faGithub} />
+              <Link href={repo.link}>{`     ${repo.name}`}</Link>
+            </LinkContainer>
+          ))}
+        </Links>
+      </InfoContainer>
+    </ProjectContainer>
+  );
+};
 
 export default Project;
