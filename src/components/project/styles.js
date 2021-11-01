@@ -4,7 +4,7 @@ import { colors } from '../../utils/constants';
 
 export const ProjectContainer = styled.li`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 45%;
   grid-gap: 125px 100px;
   margin-bottom: 120px;
   @media screen and (max-width: 960px) {
@@ -25,15 +25,13 @@ export const Image = styled.img`
 `;
 
 export const InfoContainer = styled.div`
-  display: grid;
-  grid-template-rows: 40px 25px 1fr 20px;
   color: ${colors.black};
 `;
 
 export const Title = styled.h3`
   font-size: 32px;
   line-height: 1;
-  margin: 0;
+  margin: 0 0 10px;
   @media screen and (max-width: 425px) {
     font-size: 24px;
   }
@@ -61,6 +59,7 @@ export const TechStack = styled.ul`
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 `;
 
 export const Description = styled.ul`
@@ -70,7 +69,7 @@ export const Description = styled.ul`
   flex-direction: column;
   justify-content: center;
   font-size: 26px;
-  margin-top: 16px;
+  margin-top: 82px;
   @media screen and (max-width: 1320px) {
     font-size: 20px;
   }
@@ -79,7 +78,7 @@ export const Description = styled.ul`
   }
 `;
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.li`
   margin: 0px 0 20px;
   line-height: 1.3;
 `;

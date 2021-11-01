@@ -69,17 +69,17 @@ const projects = [
   },
   {
     title: 'Microservices',
-    image: './images/projects/around-js.png',
+    image: './images/projects/node-express-mongodb.jpg',
     tech: ['Node', 'Express', 'MongoDB', 'JavaScript'],
     description: [
-      'A collection of microservices',
+      'A collection of NodeJS microservices',
+      '- a URL shortener',
+      '- a time stamper',
+      '- a header parser',
+      '- a file metadata parser',
     ],
     demoLink: '/backend-projects',
     internalLink: true,
-    repos: [
-      { name: 'Front-end', link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend' },
-      { name: 'Back-end', link: 'https://github.com/kvnloughead/react-around-api-full' },
-    ],
   },
 ];
 

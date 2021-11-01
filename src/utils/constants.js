@@ -15,4 +15,6 @@ export const colors = {
   white: 'rgb(205, 206, 210)',
   accent: 'rgb(240, 103, 47)',
   transparent: 'transparent',
+  red: 'red',
+  pureWhite: 'white',
 };

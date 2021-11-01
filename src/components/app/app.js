@@ -10,11 +10,9 @@ import About from '../about/about';
 import Projects from '../projects/projects';
 import Skills from '../skills/skills';
 import Footer from '../footer/footer';
-
-import { colors } from '../../utils/constants';
+import ProjectDetails from '../ProjectDetails/ProjectDetails';
 
 const pageStyles = {
-  background: colors.darkColor,
   fontFamily: 'sans-serif',
   display: 'flex',
   flexDirection: 'column',
@@ -43,11 +41,11 @@ const App = () => {
 
   return (
     <Layout>
-      <main style={pageStyles}>
-        <title>Kevin Loughead&apos;s Portfolio</title>
-        <Route exact path="/">
-          <NavbarContext.Provider value={currentNavlink}>
-            <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="home" />
+      <title>Kevin Loughead&apos;s Portfolio</title>
+      <Route exact path="/">
+        <NavbarContext.Provider value={currentNavlink}>
+          <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="home" />
+          <main style={pageStyles}>
             <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
             <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
             <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
@@ -59,12 +57,12 @@ const App = () => {
                 }
               }}
             />
-          </NavbarContext.Provider>
-        </Route>
-        <Route path="/backend-projects">
-          <h1>This is backend only project section</h1>
-        </Route>
-      </main>
+          </main>
+        </NavbarContext.Provider>
+      </Route>
+      <Route path="/backend-projects">
+        <ProjectDetails />
+      </Route>
       <Footer />
     </Layout>
   );

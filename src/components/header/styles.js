@@ -15,7 +15,6 @@ export const HeaderContainer = styled.header`
   min-height: 700px;
   max-height: 900px;
   box-sizing: border-box;
-  max-width: 1440px;
   @media screen and (max-width: 767.5px) {
     flex-direction: column;
     align-items: center;

@@ -3,6 +3,9 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
+// eslint-disable-next-line import/no-unresolved
+import ProjectInfo from './ProjectInfo/ProjectInfo';
+
 import {
   ProjectContainer,
   Image,
@@ -23,25 +26,36 @@ const Project = ({ data }) => {
 
   return (
     <ProjectContainer>
-      <Image alt={data.title} src={data.image} />
-      <InfoContainer>
+
+      <div>
         <Title>{data.title}</Title>
         <TechStack>
           {data.tech.map((item) => (
             <TechItem key={`${data.title}-${item}`}>{item}</TechItem>
           ))}
         </TechStack>
-        <Description>
-          {data.description.map((paragraph) => (
-            <Paragraph key={paragraph}>{paragraph}</Paragraph>
-          ))}
-        </Description>
+        <Image alt={data.title} src={data.image} />
+      </div>
 
+      <InfoContainer>
+        {data.markdown ? (
+          <ProjectInfo data />
+        ) : (
+          <Description>
+            {data.description.map((paragraph) => (
+              <Paragraph key={paragraph}>{paragraph}</Paragraph>
+            ))}
+          </Description>
+        )}
         <Links>
           <li>
-            <DemoLink href={`${data.internalLink ? HOME : ''}${data.demoLink}`}>Demo</DemoLink>
+            {data.internalLink ? (
+              <DemoLink href={`${data.internalLink ? HOME : ''}${data.demoLink}`}>See more</DemoLink>
+            ) : (
+              <DemoLink href={data.demoLink}>Live Site</DemoLink>
+            )}
           </li>
-          {data.repos.map((repo) => (
+          {data.repos && data.repos.map((repo) => (
             <LinkContainer key={repo.link}>
               <FontAwesomeIcon icon={faGithub} />
               <Link href={repo.link}>{`     ${repo.name}`}</Link>
