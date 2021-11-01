@@ -26,6 +26,9 @@ export const Image = styled.img`
 
 export const InfoContainer = styled.div`
   color: ${colors.black};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const Title = styled.h3`

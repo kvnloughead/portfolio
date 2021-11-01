@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 import { colors } from '../../utils/constants';
 
+export const Heading = styled.h4`
+  margin-top: 0;
+`;
+
 export const InlineCode = styled.code`
   color: ${colors.accent};
   background: ${colors.pureWhite};

@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from '../../../utils/constants';
 
-export const Description = styled.ul`
-  list-style: none;
+export const Description = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;

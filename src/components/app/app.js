@@ -9,9 +9,9 @@ import About from '../about/about';
 import Projects from '../projects/projects';
 import Skills from '../skills/skills';
 import Footer from '../footer/footer';
-import ProjectDetails from '../ProjectDetails/ProjectDetails';
 
 import { projects, backendProjects } from '../../config/projects';
+import microservices from '../../config/microservices';
 
 const pageStyles = {
   fontFamily: 'sans-serif',
@@ -62,7 +62,7 @@ const App = () => {
         </NavbarContext.Provider>
       </Route>
       <Route path="/backend-projects">
-        <ProjectDetails />
+        <Projects title="Microservices" projects={microservices} />
       </Route>
       <Footer />
     </Layout>

@@ -84,6 +84,21 @@ export const backendProjects = [
     demoLink: '/backend-projects',
     internalLink: true,
   },
+  {
+    title: 'News Explorer',
+    image: './images/projects/news-explorer.png',
+    tech: ['React', 'Node', 'Express', 'MongoDB', 'JavaScript'],
+    description: [
+      'A MERN stack application that interacts with the public News API service to search for and display articles.',
+      'Authenticated users can save articles to their personal profile pages for later reading.',
+      'This was the capstone project of the Practicum Web Development bootcamp. The frontend was created with Create-React-App, and the backend is written in Node/Express.js with MongoDB. The backend is deployed on a AWS(EC2) instance, with a Linux OS.',
+    ],
+    demoLink: 'https://kvnloughead.github.io/news-explorer-frontend/',
+    repos: [
+      { name: 'Front-end', link: 'https://github.com/kvnloughead/news-explorer-frontend' },
+      { name: 'Back-end', link: 'https://github.com/kvnloughead/news-explorer-api' },
+    ],
+  },
 ];
 
 // export default projects;

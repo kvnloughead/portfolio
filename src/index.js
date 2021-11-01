@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './components/app/app';
 import './index.css';
 import {
-  Anchor, Code, InlineCode, Paragraph,
+  Anchor, Code, InlineCode, Paragraph, Heading,
 } from './components/shared/shared';
 
 const components = {
@@ -15,6 +15,7 @@ const components = {
   inlineCode: InlineCode,
   code: Code,
   a: Anchor,
+  h4: Heading,
 };
 
 ReactDOM.render(
