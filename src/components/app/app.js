@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import { Waypoint } from 'react-waypoint';
@@ -11,6 +10,8 @@ import Projects from '../projects/projects';
 import Skills from '../skills/skills';
 import Footer from '../footer/footer';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
+
+import { projects, backendProjects } from '../../config/projects';
 
 const pageStyles = {
   fontFamily: 'sans-serif',
@@ -29,10 +30,9 @@ const WaypointWrapper = ({
         handler(event.target.URL.match(/#([a-z]+)$/)[1]);
       }
     }}
-    // eslint-disable-next-line react/jsx-props-no-spreading
     {...props}
   >
-    <Component />
+    <Component {...props} />
   </Waypoint>
 );
 
@@ -48,7 +48,8 @@ const App = () => {
           <main style={pageStyles}>
             <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
             <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
-            <WaypointWrapper component={Projects} handler={setCurrentNavlink} linkName="projects" bottomOffset="60%" topOffset="60%" />
+            <WaypointWrapper component={Projects} handler={setCurrentNavlink} title="Frontend and Fullstack Projects" linkName="Frontend/Fullstack" projects={projects} bottomOffset="60%" topOffset="60%" />
+            <Projects title="CLI and Backend Projects" projects={backendProjects} />
             <Waypoint
               onEnter={() => { setCurrentNavlink('contacts'); }}
               onLeave={({ event }) => {

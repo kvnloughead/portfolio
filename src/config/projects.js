@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     title: 'News Explorer',
     image: './images/projects/news-explorer.png',
@@ -67,6 +67,9 @@ const projects = [
       { name: 'Back-end', link: 'https://github.com/kvnloughead/react-around-api-full' },
     ],
   },
+];
+
+export const backendProjects = [
   {
     title: 'Microservices',
     image: './images/projects/node-express-mongodb.jpg',
@@ -83,4 +86,4 @@ const projects = [
   },
 ];
 
-export default projects;
+// export default projects;
