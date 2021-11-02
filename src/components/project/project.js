@@ -3,7 +3,6 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-// eslint-disable-next-line import/no-unresolved
 import ProjectInfo from './ProjectInfo/ProjectInfo';
 
 import {
@@ -39,7 +38,7 @@ const Project = ({ data }) => {
 
       <InfoContainer>
         {data.markdown ? (
-          <ProjectInfo data />
+          <ProjectInfo data={data} />
         ) : (
           <Description>
             {data.description.map((paragraph) => (

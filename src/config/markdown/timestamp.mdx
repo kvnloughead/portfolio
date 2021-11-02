@@ -1,0 +1,16 @@
+export const metadata = {
+  authors: ['Kevin']
+}
+
+#### Usage
+Requests to 
+```
+https://stampthetime.herokuapp.com/api/:time
+``` 
+for a valid date string time will return an object of the form
+
+```
+{ "unix": unix-time-stamp, "utc": utc-date-string }
+```
+
+For a current timestamp, simply omit `time` from the URL.
