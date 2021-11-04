@@ -1,15 +1,18 @@
 export const metadata = {
-  authors: ['Kevin']
-}
+  authors: ['Kevin'],
+};
 
 #### Usage
-Requests to 
-```
-https://stampthetime.herokuapp.com/api/:time
-``` 
-for a valid date string time will return an object of the form
+
+Requests to
 
 ```
+https://stampthetime.herokuapp.com/api/:time
+```
+
+for a valid date string time will return an object of the form
+
+```JSON
 { "unix": unix-time-stamp, "utc": utc-date-string }
 ```
 

@@ -21,6 +21,17 @@ const microservices = [
     ],
     markdown: './markdown/timestamp.mdx',
   },
+  {
+    title: 'Parse My Header',
+    slug: 'HeaderParser',
+    image: './images/projects/microservices/header-parser.png',
+    tech: ['Node', 'Express', 'JavaScript'],
+    demoLink: 'https://parse-my-header.herokuapp.com/',
+    repos: [
+      { name: 'Repo', link: 'https://github.com/kvnloughead/header-parser' },
+    ],
+    markdown: './markdown/header-parser.mdx',
+  },
 ];
 
 export default microservices;
