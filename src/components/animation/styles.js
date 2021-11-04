@@ -60,22 +60,24 @@ export const AnimationContainer = styled.div`
 
 export const SunStyles = css`
   border-radius: 50%;
-  background: ${(props) => (props && props.isArrow ? `${colors.transparent}` : `${colors.white}`)};
+  background: ${(props) =>
+    props && props.isArrow ? `${colors.transparent}` : `${colors.white}`};
   width: 38px;
   height: 38px;
   position: absolute;
   top: 185px;
   left: 34px;
-  animation: ${changeToAccentColor} 3s cubic-bezier(.74,.1,.88,.14) 1 forwards, 
-             ${grow} 3s cubic-bezier(.74,.1,.88,.14) 1 forwards,
-             ${shrink} 1s cubic-bezier(.01,.96,.01,1.04) 1 forwards 3s,
-             ${changeToWhite} 1s cubic-bezier(.01,.96,.01,1.04) 1 forwards 3s;
+  animation: ${changeToAccentColor} 3s cubic-bezier(0.74, 0.1, 0.88, 0.14) 1
+      forwards,
+    ${grow} 3s cubic-bezier(0.74, 0.1, 0.88, 0.14) 1 forwards,
+    ${shrink} 1s cubic-bezier(0.01, 0.96, 0.01, 1.04) 1 forwards 3s,
+    ${changeToWhite} 1s cubic-bezier(0.01, 0.96, 0.01, 1.04) 1 forwards 3s;
 `;
 
 export const InnerOrbit = styled.div`
   border-radius: 50%;
   border: 1px solid ${colors.white};
-  width: 65px;  
+  width: 65px;
   height: 65px;
   display: flex;
   align-items: center;
@@ -97,7 +99,7 @@ export const OuterOrbitStyles = css`
   position: relative;
   opacity: 1;
   animation: ${revolve} 5s linear infinite,
-             ${dissipate} 2s ease-out 1 3s forwards;
+    ${dissipate} 2s ease-out 1 3s forwards;
 `;
 
 export const Orbit = styled.div`

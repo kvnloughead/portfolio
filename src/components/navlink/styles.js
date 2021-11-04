@@ -11,7 +11,7 @@ export const NavItem = styled.li`
     margin-right: 0;
     margin-bottom: 18px;
     &:last-child {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
   }
 `;
@@ -26,7 +26,8 @@ export const NavLinkAnchorStyles = css`
   vertical-align: super;
   font: 20px 'opensans-bold', sans-serif;
   letter-spacing: 2.5px;
-  color: ${(props) => (props && props.isCurrent ? `${colors.accent}` : `${colors.white}`)};
+  color: ${(props) =>
+    props && props.isCurrent ? `${colors.accent}` : `${colors.white}`};
 
   &:focus {
     outline: ${colors.white} 1px solid;
@@ -35,5 +36,4 @@ export const NavLinkAnchorStyles = css`
   @media screen and (max-width: 767.5px) {
     font-size: 12px;
   }
-
 `;

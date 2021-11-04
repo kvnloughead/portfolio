@@ -30,18 +30,26 @@ const Item = styled.li`
 `;
 
 const Anchor = styled.a`
-  color: rgb(205,206,210);
+  color: rgb(205, 206, 210);
 `;
 
 const Contacts = () => (
   <List>
     <Item>
-      <Anchor target="_blank" href={contactInfo.github} rel="noopener noreferer">
+      <Anchor
+        target="_blank"
+        href={contactInfo.github}
+        rel="noopener noreferer"
+      >
         <FontAwesomeIcon icon={faGithub} />
       </Anchor>
     </Item>
     <Item>
-      <Anchor target="_blank" href={contactInfo.linkedIn} rel="noopener noreferer">
+      <Anchor
+        target="_blank"
+        href={contactInfo.linkedIn}
+        rel="noopener noreferer"
+      >
         <FontAwesomeIcon icon={faLinkedin} />
       </Anchor>
     </Item>
@@ -51,7 +59,11 @@ const Contacts = () => (
       </Anchor>
     </Item>
     <Item>
-      <Anchor target="_blank" href={contactInfo.resume} rel="noopener noreferer">
+      <Anchor
+        target="_blank"
+        href={contactInfo.resume}
+        rel="noopener noreferer"
+      >
         <FontAwesomeIcon icon={faDownload} />
       </Anchor>
     </Item>

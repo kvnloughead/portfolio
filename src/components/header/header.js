@@ -6,9 +6,7 @@ import Animation from '../animation/animation';
 
 import { personalInfo } from '../../config/resume-data';
 
-import {
-  HeaderContainer, Info, Name, Job, Degree,
-} from './styles';
+import { HeaderContainer, Info, Name, Job, Degree } from './styles';
 
 const Header = React.forwardRef((props, ref) => (
   <div ref={ref}>

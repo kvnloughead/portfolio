@@ -21,12 +21,20 @@ const pageStyles = {
 };
 
 const WaypointWrapper = ({
-  component: Component, handler, linkName, ...props
+  component: Component,
+  handler,
+  linkName,
+  ...props
 }) => (
   <Waypoint
-    onEnter={() => { handler(linkName); }}
+    onEnter={() => {
+      handler(linkName);
+    }}
     onLeave={({ event }) => {
-      if (typeof event.target.URL === 'string' && event.target.URL.match(/#([a-z]+)$/)) {
+      if (
+        typeof event.target.URL === 'string' &&
+        event.target.URL.match(/#([a-z]+)$/)
+      ) {
         handler(event.target.URL.match(/#([a-z]+)$/)[1]);
       }
     }}
@@ -44,16 +52,47 @@ const App = () => {
       <title>Kevin Loughead&apos;s Portfolio</title>
       <Route exact path="/">
         <NavbarContext.Provider value={currentNavlink}>
-          <WaypointWrapper component={Header} handler={setCurrentNavlink} linkName="home" />
+          <WaypointWrapper
+            component={Header}
+            handler={setCurrentNavlink}
+            linkName="home"
+          />
           <main style={pageStyles}>
-            <WaypointWrapper component={About} handler={setCurrentNavlink} linkName="about" bottomOffset="60%" />
-            <WaypointWrapper component={Skills} handler={setCurrentNavlink} linkName="skills" bottomOffset="60%" topOffset="60%" />
-            <WaypointWrapper component={Projects} handler={setCurrentNavlink} title="Frontend and Fullstack Projects" linkName="Frontend/Fullstack" projects={projects} bottomOffset="60%" topOffset="60%" />
-            <Projects title="CLI and Backend Projects" projects={backendProjects} />
+            <WaypointWrapper
+              component={About}
+              handler={setCurrentNavlink}
+              linkName="about"
+              bottomOffset="60%"
+            />
+            <WaypointWrapper
+              component={Skills}
+              handler={setCurrentNavlink}
+              linkName="skills"
+              bottomOffset="60%"
+              topOffset="60%"
+            />
+            <WaypointWrapper
+              component={Projects}
+              handler={setCurrentNavlink}
+              title="Frontend and Fullstack Projects"
+              linkName="Frontend/Fullstack"
+              projects={projects}
+              bottomOffset="60%"
+              topOffset="60%"
+            />
+            <Projects
+              title="CLI and Backend Projects"
+              projects={backendProjects}
+            />
             <Waypoint
-              onEnter={() => { setCurrentNavlink('contacts'); }}
+              onEnter={() => {
+                setCurrentNavlink('contacts');
+              }}
               onLeave={({ event }) => {
-                if (typeof event.target.URL === 'string' && event.target.URL.match(/#([a-z]+)$/)) {
+                if (
+                  typeof event.target.URL === 'string' &&
+                  event.target.URL.match(/#([a-z]+)$/)
+                ) {
                   setCurrentNavlink(event.target.URL.match(/#([a-z]+)$/)[1]);
                 }
               }}

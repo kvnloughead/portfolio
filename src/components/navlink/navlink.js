@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 import { NavItem, NavLinkAnchorStyles } from './styles';
 
-const NavLinkAnchor = styled.a`${NavLinkAnchorStyles}`;
+const NavLinkAnchor = styled.a`
+  ${NavLinkAnchorStyles}
+`;
 
 function NavLink({ htmlId, title, isCurrent }) {
   return (

@@ -1,6 +1,11 @@
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import {
-  faGithub, faJs, faPython, faNodeJs, faReact, faAws,
+  faGithub,
+  faJs,
+  faPython,
+  faNodeJs,
+  faReact,
+  faAws,
 } from '@fortawesome/free-brands-svg-icons';
 
 export const personalInfo = {

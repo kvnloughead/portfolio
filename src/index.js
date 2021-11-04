@@ -5,15 +5,19 @@ import { MDXProvider } from '@mdx-js/react';
 import reportWebVitals from './reportWebVitals';
 
 import App from './components/app/app';
+import CodeBlock from './components/CodeBlock/CodeBlock';
 import './index.css';
 import {
-  Anchor, Code, InlineCode, Paragraph, Heading,
+  Anchor,
+  InlineCode,
+  Paragraph,
+  Heading,
 } from './components/shared/shared';
 
 const components = {
   p: Paragraph,
   inlineCode: InlineCode,
-  code: Code,
+  code: CodeBlock,
   a: Anchor,
   h4: Heading,
 };
@@ -26,7 +30,7 @@ ReactDOM.render(
       </MDXProvider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -16,9 +16,7 @@ const microservices = [
     image: './images/projects/microservices/timestamp.png',
     tech: ['Node', 'Express', 'JavaScript'],
     demoLink: 'https://stampthetime.herokuapp.com/',
-    repos: [
-      { name: 'Repo', link: 'https://github.com/kvnloughead/timestamp' },
-    ],
+    repos: [{ name: 'Repo', link: 'https://github.com/kvnloughead/timestamp' }],
     markdown: './markdown/timestamp.mdx',
   },
   {

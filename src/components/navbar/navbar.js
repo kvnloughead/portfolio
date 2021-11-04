@@ -9,7 +9,9 @@ import { colors, screenSizes } from '../../utils/constants';
 import { links, lightMenuIcon, lightCloseIcon } from '../../config/navbar';
 import { Nav, ListStyles, MenuButton } from './styles';
 
-const List = styled.ul`${ListStyles}`;
+const List = styled.ul`
+  ${ListStyles}
+`;
 
 function Navbar() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -51,7 +53,7 @@ function Navbar() {
           setIsScrolling(false);
         }, 250);
       },
-      false,
+      false
     );
   });
 
@@ -60,26 +62,38 @@ function Navbar() {
   return (
     <Nav
       style={{
-        background: isNavbarDark || isMobileMenuOpen ? colors.grey : colors.darkColor,
+        background:
+          isNavbarDark || isMobileMenuOpen ? colors.grey : colors.darkColor,
         opacity: isScrolling ? (isNavbarDark ? 0.5 : 0.1) : 1,
       }}
     >
       <List
         isMobileMenuOpen={isMobileMenuOpen}
         id="navlink-wrapper"
-        style={{ background: `${isMobileMenuOpen ? colors.grey : colors.transparent}` }}
+        style={{
+          background: `${isMobileMenuOpen ? colors.grey : colors.transparent}`,
+        }}
       >
         {links.map((link) => (
-          <NavLink isCurrent={link.htmlId === currentNavlink} htmlId={link.htmlId} title={link.title} key={`navlink-${link.title}`} />
+          <NavLink
+            isCurrent={link.htmlId === currentNavlink}
+            htmlId={link.htmlId}
+            title={link.title}
+            key={`navlink-${link.title}`}
+          />
         ))}
       </List>
       {isMobile && (
-      <MenuButton
-        type="button"
-        aria-label="open-or-close-mobile-menu"
-        style={{ backgroundImage: `url(${isMobileMenuOpen ? lightCloseIcon : lightMenuIcon})` }}
-        onClick={handleMenuIconClick}
-      />
+        <MenuButton
+          type="button"
+          aria-label="open-or-close-mobile-menu"
+          style={{
+            backgroundImage: `url(${
+              isMobileMenuOpen ? lightCloseIcon : lightMenuIcon
+            })`,
+          }}
+          onClick={handleMenuIconClick}
+        />
       )}
     </Nav>
   );

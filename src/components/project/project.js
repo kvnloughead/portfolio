@@ -25,7 +25,6 @@ const Project = ({ data }) => {
 
   return (
     <ProjectContainer>
-
       <div>
         <Title>{data.title}</Title>
         <TechStack>
@@ -49,17 +48,22 @@ const Project = ({ data }) => {
         <Links>
           <li>
             {data.internalLink ? (
-              <DemoLink href={`${data.internalLink ? HOME : ''}${data.demoLink}`}>See more</DemoLink>
+              <DemoLink
+                href={`${data.internalLink ? HOME : ''}${data.demoLink}`}
+              >
+                See more
+              </DemoLink>
             ) : (
               <DemoLink href={data.demoLink}>Live Site</DemoLink>
             )}
           </li>
-          {data.repos && data.repos.map((repo) => (
-            <LinkContainer key={repo.link}>
-              <FontAwesomeIcon icon={faGithub} />
-              <Link href={repo.link}>{`     ${repo.name}`}</Link>
-            </LinkContainer>
-          ))}
+          {data.repos &&
+            data.repos.map((repo) => (
+              <LinkContainer key={repo.link}>
+                <FontAwesomeIcon icon={faGithub} />
+                <Link href={repo.link}>{`     ${repo.name}`}</Link>
+              </LinkContainer>
+            ))}
         </Links>
       </InfoContainer>
     </ProjectContainer>

@@ -10,8 +10,14 @@ export const projects = [
     ],
     demoLink: 'https://kvnloughead.github.io/news-explorer-frontend/',
     repos: [
-      { name: 'Front-end', link: 'https://github.com/kvnloughead/news-explorer-frontend' },
-      { name: 'Back-end', link: 'https://github.com/kvnloughead/news-explorer-api' },
+      {
+        name: 'Front-end',
+        link: 'https://github.com/kvnloughead/news-explorer-frontend',
+      },
+      {
+        name: 'Back-end',
+        link: 'https://github.com/kvnloughead/news-explorer-api',
+      },
     ],
   },
   {
@@ -40,7 +46,12 @@ export const projects = [
       'I was the lead of a team of three during the development of this site. We used prettier and eslint to ensure consistency and readability.',
     ],
     demoLink: 'https://kvnloughead.github.io/ant-robotics/',
-    repos: [{ name: 'Front-end', link: 'https://github.com/kvnloughead/ant-robotics' }],
+    repos: [
+      {
+        name: 'Front-end',
+        link: 'https://github.com/kvnloughead/ant-robotics',
+      },
+    ],
   },
   {
     title: 'This Portfolio',
@@ -50,7 +61,9 @@ export const projects = [
       'Portfolio project written in React with styled-components. This is the think you are looking at!',
     ],
     demoLink: 'https://kloughead.netlify.app/',
-    repos: [{ name: 'Front-end', link: 'https://github.com/kvnloughead/portfolio' }],
+    repos: [
+      { name: 'Front-end', link: 'https://github.com/kvnloughead/portfolio' },
+    ],
   },
   {
     title: 'Around the US',
@@ -63,8 +76,14 @@ export const projects = [
     ],
     demoLink: 'https://aroundreact.herokuapp.com/',
     repos: [
-      { name: 'Front-end', link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend' },
-      { name: 'Back-end', link: 'https://github.com/kvnloughead/react-around-api-full' },
+      {
+        name: 'Front-end',
+        link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend',
+      },
+      {
+        name: 'Back-end',
+        link: 'https://github.com/kvnloughead/react-around-api-full',
+      },
     ],
   },
 ];
@@ -95,8 +114,14 @@ export const backendProjects = [
     ],
     demoLink: 'https://kvnloughead.github.io/news-explorer-frontend/',
     repos: [
-      { name: 'Front-end', link: 'https://github.com/kvnloughead/news-explorer-frontend' },
-      { name: 'Back-end', link: 'https://github.com/kvnloughead/news-explorer-api' },
+      {
+        name: 'Front-end',
+        link: 'https://github.com/kvnloughead/news-explorer-frontend',
+      },
+      {
+        name: 'Back-end',
+        link: 'https://github.com/kvnloughead/news-explorer-api',
+      },
     ],
   },
 ];
