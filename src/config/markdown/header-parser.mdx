@@ -2,20 +2,18 @@ export const metadata = {
   authors: ['Kevin'],
 };
 
-#### Usage
-
 Requests to
 
-```
+```bash
 https://parse-my-header.herokuapp.com/api/whoami
 ```
 
 will return info about the client:
 
-```
+```json
 {
-  ipaddress,  # x-forwarded-for header
-  language,   # accept-language header
-  software    # user-agent header
+  "ipaddress",  # x-forwarded-for header
+  "language",   # accept-language header
+  "software",   # user-agent header
 }
 ```

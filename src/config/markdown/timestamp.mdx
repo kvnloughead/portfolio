@@ -2,18 +2,27 @@ export const metadata = {
   authors: ['Kevin'],
 };
 
-#### Usage
-
 Requests to
 
-```
+```bash
 https://stampthetime.herokuapp.com/api/:time
 ```
 
-for a valid date string time will return an object of the form
+where `time` is a valid date string, will return an object of the form
 
-```JSON
-{ "unix": unix-time-stamp, "utc": utc-date-string }
+```json
+{
+  "unix": "unix-time-stamp",
+  "utc": "utc-date-string"
+}
+```
+
+```javascript
+let foo = bar;
+
+function blah() {
+  return 'blah';
+}
 ```
 
 For a current timestamp, simply omit `time` from the URL.

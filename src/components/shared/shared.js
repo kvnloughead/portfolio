@@ -7,7 +7,7 @@ export const Heading = styled.h4`
 `;
 
 export const InlineCode = styled.code`
-  color: ${colors.accent};
+  color: ${colors.lightColor};
   background: ${colors.pureWhite};
   border-radius: 5px;
   padding: 0 2px;
