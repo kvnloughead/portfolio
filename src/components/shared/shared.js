@@ -7,10 +7,10 @@ export const Heading = styled.h4`
 `;
 
 export const InlineCode = styled.code`
-  color: ${colors.lightColor};
-  background: ${colors.pureWhite};
-  border-radius: 5px;
-  padding: 0 2px;
+  color: ${colors.white};
+  background: ${colors.inlineCodeBackground};
+  border-radius: 3px;
+  padding: 0 5px;
 `;
 
 export const Paragraph = styled.p`
@@ -24,7 +24,6 @@ export const Code = styled.code`
   display: block;
   border-radius: 5px;
   padding: 10px 5px;
-  margin-left: 5%;
   overflow: auto;
   max-width: 90%;
 `;

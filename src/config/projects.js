@@ -6,7 +6,7 @@ export const projects = [
     description: [
       'A MERN stack application that interacts with the public News API service to search for and display articles.',
       'Authenticated users can save articles to their personal profile pages for later reading.',
-      'This was the capstone project of the Practicum Web Development bootcamp. The frontend was created with Create-React-App, and the backend is written in Node/Express.js with MongoDB. The backend is deployed on a AWS(EC2) instance, with a Linux OS.',
+      'This was the capstone project of the Practicum Web Development bootcamp. The frontend was created with Create-React-App, and the backend is written in Node/Express.js with MongoDB. The backend is deployed on a Google Cloud EC2 instance, with a Linux OS.',
     ],
     demoLink: 'https://kvnloughead.github.io/news-explorer-frontend/',
     repos: [
@@ -90,6 +90,48 @@ export const projects = [
 
 export const backendProjects = [
   {
+    title: 'Command Line Notes',
+    image: './images/projects/cli/command-line-notes.png',
+    tech: ['Python', 'argparse', 'git'],
+    description: [
+      `A minimal command-line note-taking app. Allows you to take markdown notes in your 
+      editor of choice. Simply typing \`cln name-of-note\` will create a new note, or open
+      one that already exists.`,
+      `Supports Github integration, allowing you to push your code to Github with a single
+      command \`cln -p\`.`,
+    ],
+    demoLink: '/command-line-notes',
+    internalLink: true,
+    repos: [
+      {
+        name: 'Project Repo',
+        link: 'https://github.com/kvnloughead/command-line-notes',
+      },
+      {
+        name: 'Notes Repo',
+        link: 'https://github.com/kvnloughead/notes',
+      },
+    ],
+  },
+  {
+    title: 'Create-Express-App',
+    image: './images/projects/cli/create-express-app.png',
+    tech: ['NodeJS', 'Bash', 'JavaScript', 'Express', 'Mongo'],
+    description: [
+      `A CLI that automates the creation of Express apps with MongoDB. You supply it with a 
+      name for the project and names for each of the models and it will installs the 
+      necessary packages, set up the file structure and write the necessary boilerplate.`,
+    ],
+    demoLink: '/create-express-app',
+    internalLink: true,
+    repos: [
+      {
+        name: 'Project Repo',
+        link: 'https://github.com/kvnloughead/create-express-app',
+      },
+    ],
+  },
+  {
     title: 'Microservices',
     image: './images/projects/node-express-mongodb.jpg',
     tech: ['Node', 'Express', 'MongoDB', 'JavaScript'],
@@ -103,27 +145,4 @@ export const backendProjects = [
     demoLink: '/backend-projects',
     internalLink: true,
   },
-  {
-    title: 'News Explorer',
-    image: './images/projects/news-explorer.png',
-    tech: ['React', 'Node', 'Express', 'MongoDB', 'JavaScript'],
-    description: [
-      'A MERN stack application that interacts with the public News API service to search for and display articles.',
-      'Authenticated users can save articles to their personal profile pages for later reading.',
-      'This was the capstone project of the Practicum Web Development bootcamp. The frontend was created with Create-React-App, and the backend is written in Node/Express.js with MongoDB. The backend is deployed on a AWS(EC2) instance, with a Linux OS.',
-    ],
-    demoLink: 'https://kvnloughead.github.io/news-explorer-frontend/',
-    repos: [
-      {
-        name: 'Front-end',
-        link: 'https://github.com/kvnloughead/news-explorer-frontend',
-      },
-      {
-        name: 'Back-end',
-        link: 'https://github.com/kvnloughead/news-explorer-api',
-      },
-    ],
-  },
 ];
-
-// export default projects;

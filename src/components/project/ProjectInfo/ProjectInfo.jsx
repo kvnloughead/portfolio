@@ -11,6 +11,8 @@ Components.Timestamper =
   require('!babel-loader!@mdx-js/loader!../../../config/markdown/timestamp.mdx').default;
 Components.HeaderParser =
   require('!babel-loader!@mdx-js/loader!../../../config/markdown/header-parser.mdx').default;
+Components.FileAnalyzer =
+  require('!babel-loader!@mdx-js/loader!../../../config/markdown/file-analyzer.mdx').default;
 
 const ProjectInfo = ({ data }) => {
   // eslint-disable-next-line no-debugger

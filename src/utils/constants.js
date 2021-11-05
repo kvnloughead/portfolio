@@ -17,4 +17,6 @@ export const colors = {
   transparent: 'transparent',
   red: 'red',
   pureWhite: 'white',
+  inlineCodeBackground: 'rgba(30, 30, 30, 1.0)',
+  inlineCodeColor: 'rgb(156, 220, 254)',
 };

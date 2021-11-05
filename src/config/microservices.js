@@ -30,6 +30,17 @@ const microservices = [
     ],
     markdown: './markdown/header-parser.mdx',
   },
+  {
+    title: 'File Analyer',
+    slug: 'FileAnalyzer',
+    image: './images/projects/microservices/file-analyzer.png',
+    tech: ['Node', 'Express', 'JavaScript'],
+    demoLink: 'https://analyzefile.herokuapp.com/',
+    repos: [
+      { name: 'Repo', link: 'https://github.com/kvnloughead/file-analyzer' },
+    ],
+    markdown: './markdown/file-analyzer.mdx',
+  },
 ];
 
 export default microservices;

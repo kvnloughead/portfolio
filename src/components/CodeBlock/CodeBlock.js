@@ -8,7 +8,6 @@ const codeBlockStyles = {
   display: 'block',
   borderRadius: '5px',
   padding: '20px 20px 0 20px',
-  marginLeft: '5%',
   overflow: 'auto',
   maxWidth: '90%',
 };
