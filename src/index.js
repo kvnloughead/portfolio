@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { MDXProvider } from '@mdx-js/react';
+import { ThemeProvider } from '@mui/material/styles';
+
 import reportWebVitals from './reportWebVitals';
 
 import App from './components/app/app';
 import CodeBlock from './components/CodeBlock/CodeBlock';
 import './index.css';
+import theme from './utils/themes/material-ui';
 
 import {
   Anchor,
@@ -26,9 +29,11 @@ const components = {
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <MDXProvider components={components}>
-        <App />
-      </MDXProvider>
+      <ThemeProvider theme={theme}>
+        <MDXProvider components={components}>
+          <App />
+        </MDXProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
