@@ -5,7 +5,6 @@ export const Nav = styled.nav`
   justify-content: center;
   padding: 17px;
   width: 100%;
-  height: 48px;
   box-sizing: border-box;
   z-index: 4;
   position: fixed;
