@@ -1,5 +1,22 @@
 export const projects = [
   {
+    title: 'My blog (not yet named)',
+    image: './images/projects/blog.png',
+    tech: ['React', 'NextJS', 'TailwindCSS', 'Remark'],
+    description: [
+      'Work in progress. A blog site written with NextJS using TailwindCSS for styling.',
+      'The content is so far mostly about command line tools automation with Bash scripts.',
+      'Articles are written in markdown, using RemarkJS to process it into HTML.',
+    ],
+    demoLink: 'https://todo-name-blog.vercel.app/',
+    repos: [
+      {
+        name: 'Repo',
+        link: 'https://github.com/kvnloughead/blog',
+      },
+    ],
+  },
+  {
     title: 'News Explorer',
     image: './images/projects/news-explorer.png',
     tech: ['React', 'Node', 'Express', 'MongoDB', 'JavaScript'],
