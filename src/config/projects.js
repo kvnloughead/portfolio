@@ -48,9 +48,12 @@ export const projects = [
       '- Invoice line items that calculate the total automatically',
       '- [WIP] Postgresql Backend',
     ],
-    demoLink: 'https://github.com/kvnloughead/invoice-app/',
+    demoLink: 'https://simple-invoices.netlify.app',
     repos: [
-      { name: 'Front-end', link: 'https://kvnloughead.github.io/invoice-app/' },
+      {
+        name: 'Front-end',
+        link: 'https://github.com/kvnloughead/invoice-app/',
+      },
     ],
   },
   {
@@ -82,27 +85,27 @@ export const projects = [
       { name: 'Front-end', link: 'https://github.com/kvnloughead/portfolio' },
     ],
   },
-  {
-    title: 'Around the US',
-    image: './images/projects/around-js.png',
-    tech: ['React', 'Node', 'Express', 'MongoDB', 'JavaScript'],
-    description: [
-      'This picture album app was my first MERN stack application. The front-end was originally written in pure HTML, CSS and JavaScript, but was later ported to React.',
-      'The backend, which includes with user authentication with JSON webtokens, is written using Node/Express.js and MongoDB.',
-      'Deployed on Heroku.',
-    ],
-    demoLink: 'https://aroundreact.herokuapp.com/',
-    repos: [
-      {
-        name: 'Front-end',
-        link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend',
-      },
-      {
-        name: 'Back-end',
-        link: 'https://github.com/kvnloughead/react-around-api-full',
-      },
-    ],
-  },
+  // {
+  //   title: 'Around the US',
+  //   image: './images/projects/around-js.png',
+  //   tech: ['React', 'Node', 'Express', 'MongoDB', 'JavaScript'],
+  //   description: [
+  //     'This picture album app was my first MERN stack application. The front-end was originally written in pure HTML, CSS and JavaScript, but was later ported to React.',
+  //     'The backend, which includes with user authentication with JSON webtokens, is written using Node/Express.js and MongoDB.',
+  //     'Deployed on Heroku.',
+  //   ],
+  //   demoLink: 'https://aroundreact.herokuapp.com/',
+  //   repos: [
+  //     {
+  //       name: 'Front-end',
+  //       link: 'https://github.com/kvnloughead/react-around-api-full/tree/main/around-frontend',
+  //     },
+  //     {
+  //       name: 'Back-end',
+  //       link: 'https://github.com/kvnloughead/react-around-api-full',
+  //     },
+  //   ],
+  // },
 ];
 
 export const backendProjects = [
