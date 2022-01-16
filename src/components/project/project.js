@@ -47,14 +47,12 @@ const Project = ({ data }) => {
         )}
         <Links>
           <li>
-            {data.internalLink ? (
+            {data.linkLabel && (
               <DemoLink
                 href={`${data.internalLink ? HOME : ''}${data.demoLink}`}
               >
-                See more
+                {data.linkLabel}
               </DemoLink>
-            ) : (
-              <DemoLink href={data.demoLink}>Live Site</DemoLink>
             )}
           </li>
           {data.repos &&

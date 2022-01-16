@@ -8,6 +8,7 @@ export const projects = [
       'The content is so far mostly about command line tools automation with Bash scripts.',
       'Articles are written in markdown, using RemarkJS to process it into HTML.',
     ],
+    linkLabel: 'Live Site',
     demoLink: 'https://todo-name-blog.vercel.app/',
     repos: [
       {
@@ -25,6 +26,7 @@ export const projects = [
       'Authenticated users can save articles to their personal profile pages for later reading.',
       'This was the capstone project of the Practicum Web Development bootcamp. The frontend was created with Create-React-App, and the backend is written in Node/Express.js with MongoDB. The backend is deployed on a Google Cloud EC2 instance, with a Linux OS.',
     ],
+    linkLabel: 'Live Site',
     demoLink: 'https://kvnloughead.github.io/news-explorer-frontend/',
     repos: [
       {
@@ -48,6 +50,7 @@ export const projects = [
       '- Invoice line items that calculate the total automatically',
       '- [WIP] Postgresql Backend',
     ],
+    linkLabel: 'Live Site',
     demoLink: 'https://simple-invoices.netlify.app',
     repos: [
       {
@@ -65,6 +68,7 @@ export const projects = [
       'Fully responsive and easily configurable by the client by way of a collection of comprehensive JavaScript config files.',
       'I was the lead of a team of three during the development of this site. We used prettier and eslint to ensure consistency and readability.',
     ],
+    linkLabel: 'Live Site',
     demoLink: 'https://kvnloughead.github.io/ant-robotics/',
     repos: [
       {
@@ -80,6 +84,7 @@ export const projects = [
     description: [
       'Portfolio project written in React with styled-components. This is the think you are looking at!',
     ],
+    linkLabel: 'Live Site',
     demoLink: 'https://kloughead.netlify.app/',
     repos: [
       { name: 'Front-end', link: 'https://github.com/kvnloughead/portfolio' },
@@ -120,8 +125,8 @@ export const backendProjects = [
       `Supports Github integration, allowing you to push your code to Github with a single
       command \`cln -p\`.`,
     ],
-    demoLink: '/command-line-notes',
-    internalLink: true,
+    linkLabel: 'Details',
+    demoLink: 'https://todo-name-blog.vercel.app/posts/command-line-notes',
     repos: [
       {
         name: 'Project Repo',
@@ -162,6 +167,7 @@ export const backendProjects = [
       '- a header parser',
       '- a file metadata parser',
     ],
+    linkLabel: 'Details',
     demoLink: '/backend-projects',
     internalLink: true,
   },
