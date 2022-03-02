@@ -2,24 +2,31 @@ import styled, { css } from 'styled-components';
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: center;
   padding: 17px;
   width: 100%;
+  margin: auto;
   box-sizing: border-box;
   z-index: 4;
   position: fixed;
   top: 0;
-  transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity .3s ease-in-out;
+  box-shadow: 0px 2px 5px rgb(59 67 88 / 80%);
   @media screen and (max-width: 767.5px) {
     justify-content: flex-end;
   `;
 
 export const ListStyles = css`
   display: flex;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: flex-end;
   list-style: none;
-  margin: 0;
   padding: 0;
   background: transparent;
+  width: 100%;
+  @media screen and (max-width: 1000px) {
+    justify-content: center;
+  }
   @media screen and (max-width: 767.5px) {
     visibility: ${(props) =>
       props && props.isMobileMenuOpen ? 'visible' : 'hidden'};

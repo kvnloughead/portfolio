@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import NavbarContext from '../../contexts/NavbarContext';
 import NavLink from '../navlink/navlink';
 import { colors, screenSizes } from '../../utils/constants';
 import { links, lightMenuIcon, lightCloseIcon } from '../../config/navbar';
@@ -14,14 +13,11 @@ const List = styled.ul`
 `;
 
 function Navbar() {
-  const [isScrolling, setIsScrolling] = useState(false);
   const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
-  const [, setWindowScrollY] = useState(window.scrollY);
-  const [isNavbarDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const currentNavlink = React.useContext(NavbarContext);
-
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [, setWindowScrollY] = useState(window.scrollY);
   const handleScrollY = () => {
     setWindowScrollY(window.scrollY);
   };
@@ -62,9 +58,8 @@ function Navbar() {
   return (
     <Nav
       style={{
-        background:
-          isNavbarDark || isMobileMenuOpen ? colors.grey : colors.darkColor,
-        opacity: isScrolling ? (isNavbarDark ? 0.5 : 0.1) : 1,
+        background: isMobileMenuOpen ? colors.grey : colors.darkColor,
+        opacity: isScrolling ? 0.3 : 1,
       }}
     >
       <List
@@ -76,8 +71,7 @@ function Navbar() {
       >
         {links.map((link) => (
           <NavLink
-            isCurrent={link.htmlId === currentNavlink}
-            htmlId={link.htmlId}
+            link={link.link}
             title={link.title}
             key={`navlink-${link.title}`}
           />

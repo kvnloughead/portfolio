@@ -10,10 +10,10 @@ import {
 
 export const personalInfo = {
   name: 'Kevin Loughead',
-  job: 'Full Stack Developer',
+  job: 'Software Engineer | Content Manager',
   degree: 'BA Mathematics',
   summary:
-    'Fullstack developer and tutor in web development with a background in mathematics. I have a passion for learning and for helping others to learn. I love solving problems and writing reusable and maintainable code.',
+    "Hello, world! My name's Kevin and I'm a content manager and author for the Practicum by Yandex software engineering bootcamp. I'm also something of a software engineer myself. I like to work on web development projects and command line applications, in a variety of languages. Thanks for stopping by!",
 };
 
 export const profilePic = './images/profile-pic.jpg';

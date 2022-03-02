@@ -1,24 +1,31 @@
 import * as React from 'react';
 
+import { personalInfo, profilePic } from '../../config/resume-data';
 import Navbar from '../navbar/navbar';
-import Contacts from '../contacts/contacts';
-import Animation from '../animation/animation';
 
-import { personalInfo } from '../../config/resume-data';
-
-import { HeaderContainer, Info, Name, Job, Degree } from './styles';
+import {
+  HeaderContainer,
+  Info,
+  Name,
+  Job,
+  Image,
+  Summary,
+  FlexContainer,
+} from './styles';
 
 const Header = React.forwardRef((props, ref) => (
   <div ref={ref}>
+    <Navbar />
+
     <HeaderContainer id="home">
-      <Navbar />
-      <Info>
-        <Name>{`${personalInfo.name}`}</Name>
-        <Job>{personalInfo.job}</Job>
-        <Degree>{personalInfo.degree}</Degree>
-        <Contacts />
-      </Info>
-      <Animation />
+      <FlexContainer>
+        <Info>
+          <Name>{`${personalInfo.name}`}</Name>
+          <Job>{personalInfo.job}</Job>
+        </Info>
+        <Image alt={personalInfo.name} src={profilePic} />
+      </FlexContainer>
+      <Summary>{personalInfo.summary}</Summary>
     </HeaderContainer>
   </div>
 ));

@@ -1,13 +1,23 @@
+header {
+  max-width: 1280px;
+}
+
+main {
+  margin: auto;
+}
+
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-a {
-}
-
-section {
-  max-width: 936px;
-  margin: auto;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }

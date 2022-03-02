@@ -7,10 +7,10 @@ const NavLinkAnchor = styled.a`
   ${NavLinkAnchorStyles}
 `;
 
-function NavLink({ htmlId, title, isCurrent }) {
+function NavLink({ link, title, isCurrent }) {
   return (
     <NavItem>
-      <NavLinkAnchor isCurrent={isCurrent} href={`#${htmlId}`}>
+      <NavLinkAnchor isCurrent={isCurrent} href={link}>
         {title}
       </NavLinkAnchor>
     </NavItem>

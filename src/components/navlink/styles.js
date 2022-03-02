@@ -7,6 +7,11 @@ export const NavItem = styled.li`
   &:last-child {
     margin-right: 0;
   }
+  @media screen and (min-width: 1000px) {
+    &:first-of-type {
+      margin-right: auto;
+    }
+  }
   @media screen and (max-width: 767.5px) {
     margin-right: 0;
     margin-bottom: 18px;

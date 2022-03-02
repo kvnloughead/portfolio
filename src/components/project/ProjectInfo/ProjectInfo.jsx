@@ -15,8 +15,6 @@ Components.FileAnalyzer =
   require('!babel-loader!@mdx-js/loader!../../../config/markdown/file-analyzer.mdx').default;
 
 const ProjectInfo = ({ data }) => {
-  // eslint-disable-next-line no-debugger
-  debugger;
   const MDXDocument = Components[data.slug];
   return (
     <Description>

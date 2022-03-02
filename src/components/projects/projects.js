@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
 
@@ -7,7 +6,6 @@ import { ProjectsContainer, Title, List } from './styles';
 import { colors } from '../../utils/constants';
 
 const Projects = React.forwardRef((props, ref) => {
-  debugger;
   const [numberShown, setNumberShown] = useState(3);
   const [displayButton, setDisplayButton] = useState(props.projects.length > 3);
 

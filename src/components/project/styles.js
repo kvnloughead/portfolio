@@ -35,8 +35,8 @@ export const Title = styled.h3`
   font-size: 32px;
   line-height: 1;
   margin: 0 0 10px;
-  @media screen and (max-width: 425px) {
-    font-size: 24px;
+  @media screen and (max-width: 525px) {
+    font-size: 20px;
   }
 `;
 
@@ -44,13 +44,15 @@ export const TechItem = styled.li`
   border-radius: 5%;
   margin-right: 10px;
   padding: 5px 7px;
+  letter-spacing: 1.5px;
+
   line-height: 1.17;
   color: ${colors.white};
   background-color: ${colors.grey};
   @media screen and (max-width: 1200px) {
     font-size: 12px;
   }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 525px) {
     font-size: 9px;
     margin-right: 4px;
     padding: 7px 7px;

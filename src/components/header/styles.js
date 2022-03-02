@@ -1,26 +1,47 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { colors } from '../../utils/constants';
 
 export const HeaderContainer = styled.header`
-  color: ${colors.white};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  font-family: sans-serif;
-  padding: 100px 0;
+  margin: auto;
   height: 100vh;
   min-height: 700px;
-  max-height: 900px;
+  max-height: 1200px;
+  max-width: 1280px;
   box-sizing: border-box;
-  @media screen and (max-width: 767.5px) {
+
+  color: ${colors.white};
+  font-family: sans-serif;
+
+  display: flex;
+  position: relative;
+
+  @media screen and (max-width: 1380px) {
+    margin: 0 100px;
+  }
+  @media screen and (max-width: 767px) {
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
   }
   @media screen and (max-width: 375px) {
     max-width: 320px;
+  }
+`;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  top: -5%;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  @media screen and (max-width: 475px) {
+    margin-top: 100px;
   }
 `;
 
@@ -28,29 +49,27 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 800px;
   @media screen and (min-width: 1800px) {
     margin-right: 7vw;
   }
-  @media screen and (max-width: 1280px) {
-    min-width: 0;
-  }
-  @media screen and (max-width: 767.5px) {
+  @media screen and (max-width: 1000px) {
     align-items: center;
+    text-align: center;
   }
 `;
 
 export const Name = styled.h1`
-  font-size: 90px;
+  font-size: 80px;
   margin: 0 0 32px 0;
-  @media screen and (max-width: 900px) {
-    font-size: 60px;
+  @media screen and (max-width: 1200px) {
+    font-size: 72px;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 1000px) {
     font-size: 48px;
   }
-  @media screen and (max-width: 600px) {
-    font-size: 48px;
+  @media screen and (max-width: 767px) {
+    font-size: 36px;
+    margin: 8px;
   }
   @media screen and (max-width: 375px) {
     font-size: 36px;
@@ -60,44 +79,47 @@ export const Name = styled.h1`
 export const Job = styled.p`
   font-size: 45px;
   margin: 0 0 10px 0;
-  @media screen and (max-width: 900px) {
-    font-size: 36px;
+  @media screen and (max-width: 1200px) {
+    font-size: 42px;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 28px;
   }
   @media screen and (max-width: 375px) {
     font-size: 24px;
   }
 `;
 
-export const Degree = Job;
-
-export const HeaderImage = styled.img`
-  padding-top: 81px;
-  @media screen and (max-width: 1024px) {
-    padding-top: 20px;
-    width: 321px;
-    height: 280px;
+export const Image = styled.img`
+  border-radius: 9999px;
+  width: 200px;
+  height: 200px;
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 30px;
   }
-  @media screen and (max-width: 800px) {
-    padding-top: 116px;
-    width: 214px;
-    height: 187px;
-  }
-  @media screen and (max-width: 375px) {
-    transform: scale(0.4) translateY: -30px;
-    padding-top: 10px;
+  @media screen and (max-width: 767px) {
+    width: 150px;
+    height: 150px;
   }
 `;
 
-export const DownArrow = styled(FontAwesomeIcon)`
+export const Summary = styled.p`
   position: absolute;
-  bottom: 10px;
+  bottom: 10%;
   right: 0;
-  left: 0;
-  margin: auto;
+  font-size: 24px;
+  line-height: 1.2;
   text-align: center;
-  color: ${colors.accent};
-  font-size: 3em;
-  @media screen and (max-width: 568px) {
-    font-size: 2em;
+  color: ${colors.white};
+  max-width: 80%;
+  align-self: flex-end;
+  font-family: monospace;
+  @media screen and (max-width: 1000px) {
+    max-width: 100%;
+    font-size: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    position: static;
+    font-size: 16px;
   }
 `;

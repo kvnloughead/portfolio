@@ -1,32 +1,30 @@
-// import { addUniqueId } from '../utils/unique-id';
-
 export const htmlIds = {
   home: 'home',
-  about: 'about',
-  skills: 'skills',
   projects: 'projects',
   contacts: 'contacts',
+  blog: 'blog',
+  resume: 'resume',
 };
 
 export const links = [
   {
-    htmlId: htmlIds.home,
+    link: '#home',
     title: 'Home',
   },
   {
-    htmlId: htmlIds.about,
-    title: 'About',
-  },
-  {
-    htmlId: htmlIds.skills,
-    title: 'Skills',
-  },
-  {
-    htmlId: htmlIds.projects,
+    link: '#projects',
     title: 'Projects',
   },
   {
-    htmlId: htmlIds.contacts,
+    link: 'https://todo-name-blog.vercel.app/',
+    title: 'Blog',
+  },
+  {
+    link: './kloughead_resume.pdf',
+    title: 'Resume',
+  },
+  {
+    link: '#contacts',
     title: 'Contacts',
   },
 ];
@@ -35,5 +33,3 @@ export const darkMenuIcon = './images/navbar/menu-icon-dark.svg';
 export const lightMenuIcon = './images/navbar/menu-icon-light.svg';
 export const darkCloseIcon = './images/navbar/dark-close-icon.svg';
 export const lightCloseIcon = './images/navbar/light-close-icon.svg';
-
-// addUniqueId(links);
