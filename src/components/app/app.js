@@ -5,6 +5,7 @@ import Layout from '../layout/layout';
 import Header from '../header/header';
 import Projects from '../projects/projects';
 import Footer from '../footer/footer';
+import Skills from '../skills/skills';
 
 import { projects, backendProjects } from '../../config/projects';
 import microservices from '../../config/microservices';
@@ -22,6 +23,7 @@ const App = () => {
       <title>Kevin Loughead&apos;s Portfolio</title>
       <Route exact path="/">
         <Header />
+        <Skills />
         <main style={pageStyles}>
           <Projects
             projects={projects}

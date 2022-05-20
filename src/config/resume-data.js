@@ -19,13 +19,17 @@ export const personalInfo = {
 export const profilePic = './images/profile-pic.jpg';
 
 export const contactInfo = {
-  linkedIn: 'https://www.linkedin.com/in/kloughead/',
-  github: 'https://github.com/kvnloughead',
-  email: 'mailto:kvnloughead@gmail.com',
-  resume: './kloughead_resume.pdf',
+  // Change the placeholders or remove the links from the array
+  linkedIn: 'https://www.linkedin.com/in/placeholder/',
+  github: 'https://github.com/placeholder',
+  email: 'mailto:placeholder@email.com',
+  resume: '', // link to a local file
 };
 
 export const skills = [
+  // Update as desired, or just pull the whole Skills component. I don't
+  // like it very much, but it works. Most icons are from fontawesome, but
+  // other images work, although they might not fit in.
   { name: 'MongoDB', icon: faDatabase },
   { name: 'Express', src: './images/icons/expressjs-icon.svg' },
   { name: 'React', icon: faReact },
