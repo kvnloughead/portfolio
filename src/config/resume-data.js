@@ -9,14 +9,15 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 export const personalInfo = {
-  name: 'Kevin Loughead',
-  job: 'Software Engineer | Content Manager',
-  degree: 'BA Mathematics',
+  name: 'Laurel Ipsum',
+  job: 'Senior Artificial Turf Engineer',
+  degree: 'BS Applied Turf Management',
   summary:
-    "Hello, world! My name's Kevin and I'm a content manager and author for the Practicum by Yandex software engineering bootcamp. I'm also something of a software engineer myself. I like to work on web development projects and command line applications, in a variety of languages. Thanks for stopping by!",
+    "Hello, world! I'm Laurel and this is my website. I'm a Turf Management  professional with over 20 years of experience in all of the newest Turfware Frameworks that have been developed in the last decade. I also dabble in web development, hence the website, and the list of web dev skills.",
 };
 
-export const profilePic = './images/profile-pic.jpg';
+// Images should go in public/images
+export const profilePic = './images/placeholder.jpg';
 
 export const contactInfo = {
   // Change the placeholders or remove the links from the array

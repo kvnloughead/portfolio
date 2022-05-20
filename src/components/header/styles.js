@@ -90,6 +90,8 @@ export const Job = styled.p`
   }
 `;
 
+export const Degree = Job;
+
 export const Image = styled.img`
   border-radius: 9999px;
   width: 200px;

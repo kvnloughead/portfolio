@@ -1,11 +1,3 @@
-export const htmlIds = {
-  home: 'home',
-  projects: 'projects',
-  contacts: 'contacts',
-  blog: 'blog',
-  resume: 'resume',
-};
-
 export const links = [
   {
     link: '#home',
@@ -16,11 +8,11 @@ export const links = [
     title: 'Projects',
   },
   {
-    link: 'https://todo-name-blog.vercel.app/',
+    link: 'placeholder.blog.com',
     title: 'Blog',
   },
   {
-    link: './kloughead_resume.pdf',
+    link: './placeholder.pdf',
     title: 'Resume',
   },
   {

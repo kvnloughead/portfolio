@@ -11,6 +11,7 @@ import {
   Image,
   Summary,
   FlexContainer,
+  Degree,
 } from './styles';
 
 const Header = React.forwardRef((props, ref) => (
@@ -22,6 +23,7 @@ const Header = React.forwardRef((props, ref) => (
         <Info>
           <Name>{`${personalInfo.name}`}</Name>
           <Job>{personalInfo.job}</Job>
+          <Degree>{personalInfo.degree}</Degree>
         </Info>
         <Image alt={personalInfo.name} src={profilePic} />
       </FlexContainer>
